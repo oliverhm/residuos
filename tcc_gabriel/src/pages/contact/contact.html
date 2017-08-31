@@ -1,17 +1,40 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Nossos Serviços
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
+    <button ion-button block color="primary" (click)="openRadio()">Assesoria</button>
+      <div *ngIf="opened">
+        <ion-list inset radio-group [(ngModel)]="option">
+          <ion-item>
+            <ion-label>Desenvolvimento de Projetos</ion-label>
+            <ion-radio value="dev" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Projetos de Gerenciamento</ion-label>
+            <ion-radio value="manager"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Pareceres Técnicos</ion-label>
+            <ion-radio value="tec" [disabled]="isDisabled"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Vistoria</ion-label>
+            <ion-radio value="vistoria"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Palestras e Treinamentos</ion-label>
+            <ion-radio value="vistoria"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+    <button ion-button block color="primary" (click)="navCadastroPage()">Coleta de Resíduos</button>
+    <button ion-button block color="primary" (click)="navCadastroPage()">Comprar Agregados</button>
+    <button ion-button block color="primary" (click)="navCadastroPage()">Solicitar Caçamba/ECOBAG</button>
   </ion-list>
 </ion-content>
