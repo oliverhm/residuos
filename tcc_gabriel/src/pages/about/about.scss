@@ -1,3 +1,11 @@
 page-about {
+  ion-card-title,
+  ion-list {
+    border-bottom: 1px solid;
+  }
 
+  .value {
+    float: right;
+    margin-bottom: 10px;
+  }
 }
