@@ -8,6 +8,7 @@ import { CadastroPagePage } from "../cadastro/cadastro";
   templateUrl: 'contact.html'
 })
 export class ContactPage {
+  opened2: boolean = false;
   opened: boolean = false;
 
   constructor(public navCtrl: NavController) {
@@ -20,5 +21,9 @@ export class ContactPage {
 
   openRadio() {
     this.opened = true;
+  }
+
+  openRadio2() {
+    this.opened2 = true;
   }
 }

@@ -35,6 +35,18 @@
       </div>
     <button ion-button block color="primary" (click)="navCadastroPage()">Coleta de Resíduos</button>
     <button ion-button block color="primary" (click)="navCadastroPage()">Comprar Agregados</button>
-    <button ion-button block color="primary" (click)="navCadastroPage()">Solicitar Caçamba/ECOBAG</button>
+    <button ion-button block color="primary" (click)="openRadio2()">Solicitar Caçamba/ECOBAG</button>
+    <div *ngIf="opened2">
+        <ion-list inset radio-group [(ngModel)]="option">
+          <ion-item>
+            <ion-label>Caçamba</ion-label>
+            <ion-radio value="cacamba" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>ECOBAG</ion-label>
+            <ion-radio value="ecobag"></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
   </ion-list>
 </ion-content>
